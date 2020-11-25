@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <index />
+    <v-header />
+    <transition>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
+    <!-- <index /> -->
   </div>
 </template>
 
 <script>
-import index from "./components/index.vue";
-
+import vHeader from "./components/common/header.vue";
 export default {
   name: "App",
   components: {
-    index
+    vHeader
   }
 };
 </script>
