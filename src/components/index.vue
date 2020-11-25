@@ -4,8 +4,8 @@
       <div class="echarts1" ref="echarts1"></div>
       <div class="echarts1" ref="echarts2"></div>
     </div>
-    <div class="echarts1" ref="echarts3"></div>
-    <div class="echarts1" ref="echarts4"></div>
+    <div class="echarts" ref="echarts3"></div>
+    <!-- <div class="echarts1" ref="echarts4"></div> -->
   </div>
 </template>
 
@@ -441,5 +441,9 @@ export default {
 .echarts1 {
   width: 50%;
   height: 300px;
+}
+.echarts {
+  width: 50%;
+  height: 500px;
 }
 </style>
