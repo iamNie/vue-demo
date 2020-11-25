@@ -5,6 +5,7 @@
       <div class="echarts1" ref="echarts2"></div>
     </div>
     <div class="echarts1" ref="echarts3"></div>
+    <div class="echarts1" ref="echarts4"></div>
   </div>
 </template>
 
