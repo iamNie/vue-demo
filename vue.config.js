@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 module.exports = {
     // 基本路径
-    publicPath: './', //baseUrl从cli3.3开始弃用 换成publicPath
+    publicPath: '/', //baseUrl从cli3.3开始弃用 换成publicPath
     // 输出文件目录
     outputDir: 'dist',
     // webpack-dev-server 相关配置

@@ -1,13 +1,19 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <v-header />
-    <transition>
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
-    </transition>
-    <!-- <index /> -->
+    <div class="menu">
+      <v-header />
+    </div>
+    <div style="clear:both;height:0px;display:block;overflow:hidden"></div>
+    <div class="content-box">
+      <div class="content">
+        <transition>
+          <keep-alive>
+            <router-view></router-view>
+          </keep-alive>
+        </transition>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,13 +27,39 @@ export default {
 };
 </script>
 
-<style>
+<style style="less" >
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* display: flex; */
+  /* margin-top: 60px; */
+}
+.menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /* width: 100px; */
+  overflow-y: scroll;
+}
+.content-box {
+  position: absolute;
+  left: 120px;
+  right: 0;
+  top: 2rem;
+  bottom: 0;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+  background: #fff;
+  width: calc(100% - 120px);
+  /* height: 100%; */
+}
+.content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 </style>

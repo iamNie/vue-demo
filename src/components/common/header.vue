@@ -1,31 +1,45 @@
 <template>
+  <!-- <div class="sidebar"> -->
   <el-menu
     :default-active="activeIndex2"
     class="el-menu-demo"
-    mode="horizontal"
     @select="handleSelect"
-    background-color="#545c64"
-    text-color="#fff"
+    text-color="#000"
     active-text-color="#ffd04b"
   >
-    <el-menu-item index="1" @click="getMenu('/index')">菜单一</el-menu-item>
-    <el-submenu index="2">
-      <template slot="title">菜单二</template>
-      <el-menu-item index="2-1" @click="getMenu('/pageOne')">子菜单一</el-menu-item>
-      <el-menu-item index="2-2">子菜单二</el-menu-item>
-      <el-menu-item index="2-3">子菜单三</el-menu-item>
-    </el-submenu>
-    <el-menu-item index="3">菜单四</el-menu-item>
+    <template v-for="(item,index) in menu" :index="index">
+      <template v-if="item.children.length>0">
+        <el-submenu :index="item.url" :key="index">
+          <template slot="title">{{item.name}}</template>
+          <template v-for="(childItem,childIndex) in item.children">
+            <el-menu-item
+              :index="childItem.url"
+              :key="childIndex"
+              @click="getMenu(childItem.url)"
+            >{{childItem.name}}</el-menu-item>
+          </template>
+        </el-submenu>
+      </template>
+      <template v-else>
+        <el-menu-item v-bind:index="item.url" :key="index" @click="getMenu(item.url)">{{item.name}}</el-menu-item>
+      </template>
+    </template>
   </el-menu>
+  <!-- </div> -->
 </template>
 
 <script>
+import menuJson from "./menu.json";
 export default {
   data() {
     return {
       activeIndex: "1",
-      activeIndex2: "1"
+      activeIndex2: "1",
+      menu: []
     };
+  },
+  mounted() {
+    this.menu = menuJson.menu;
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -39,3 +53,14 @@ export default {
   }
 };
 </script>
+<style lang="less" scoped>
+// .sidebar {
+//   background: rgba(29, 74, 105, 1);
+//   min-height: 100%;
+// }
+.el-menu-demo {
+  background: rgba(29, 74, 105, 1);
+  min-height: 100%;
+  width: 120px;
+}
+</style>

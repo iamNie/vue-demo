@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+
+import './assets/css/common.css'
+
 import $ from 'jquery'
 //引入echarts
 import echarts from 'echarts'

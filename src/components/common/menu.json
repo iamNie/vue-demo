@@ -1,0 +1,77 @@
+{
+    "menu": [
+        {
+            "children": [],
+            "perType": 2,
+            "perLevel": 1,
+            "name": "首页",
+            "icon": "概况",
+            "id": 10,
+            "url": "index"
+        },
+        {
+            "children": [],
+            "perType": 2,
+            "perLevel": 1,
+            "name": "菜单一",
+            "icon": "大屏",
+            "id": 100,
+            "url": "pageOne"
+        },
+        {
+            "children": [
+                {
+                    "children": [],
+                    "perType": 2,
+                    "perLevel": 2,
+                    "name": "子菜单一",
+                    "icon": null,
+                    "id": 210,
+                    "url": "/pageTwo/subPageOne"
+                }
+            ],
+            "perType": 2,
+            "perLevel": 1,
+            "name": "菜单二",
+            "icon": "安全",
+            "id": 200,
+            "url": "pageTwo"
+        },
+        {
+            "children": [],
+            "perType": 2,
+            "perLevel": 1,
+            "name": "菜单三",
+            "icon": "资产",
+            "id": 300,
+            "url": "pageThree"
+        },
+        {
+            "children": [],
+            "perType": 2,
+            "perLevel": 1,
+            "name": "菜单四",
+            "icon": "集管",
+            "id": 400,
+            "url": "pageFour"
+        },
+        {
+            "children": [],
+            "perType": 2,
+            "perLevel": 1,
+            "name": "菜单五",
+            "icon": "日历",
+            "id": 500,
+            "url": "pageFive"
+        },
+        {
+            "children": [],
+            "perType": 2,
+            "perLevel": 1,
+            "name": "菜单六",
+            "icon": "系统",
+            "id": 600,
+            "url": "pageSix"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+body{
+    margin:0
+}
+.el-menu-item,.el-submenu__title{
+    color:#fff !important;
+}
+.el-menu-item:hover,.el-submenu__title:hover{
+  background: rgba(29, 74, 105, 1) !important;
+
+}

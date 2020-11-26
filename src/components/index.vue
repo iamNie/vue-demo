@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <div class="content">
+  <div class="echarts">
+    <div class="div1">
       <div class="echarts1" ref="echarts1"></div>
       <div class="echarts1" ref="echarts2"></div>
     </div>
-    <div class="echarts" ref="echarts3"></div>
+    <div class="echarts2" ref="echarts3"></div>
     <!-- <div class="echarts1" ref="echarts4"></div> -->
   </div>
 </template>
@@ -435,14 +435,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.content {
+.echarts {
+  width: 100%;
+  height: 100%;
+}
+.div1 {
   display: flex;
 }
 .echarts1 {
   width: 50%;
   height: 300px;
 }
-.echarts {
+.echarts2 {
   width: 50%;
   height: 500px;
 }
